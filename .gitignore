@@ -1,32 +1,27 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
+# a comment - this is ignored
+# no .a files
 *.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+# but do track lib.a, even though you're ignoring .a files above
+!lib*.a
+# only ignore the root TODO file, not subdir/TODO
+/TODO
+# ignore all files in the build/ directory
+build/
+# ignore doc/notes.txt, but not doc/server/arch.txt
+doc/*.txt
+# ignore all .txt files in the doc/ directory
+doc/**/*.txt
+/Debug
+# no backup files
+*.*~
+*~
+# no make files
+*.mk
+# no .directory files
+.directory 
+# No object files
+*.o
+# Qt files
+vendor/thorlabs/ueyedemo/Makefile
+advanced_find-3.5.4/*
+freemind/*
